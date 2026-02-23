@@ -1,18 +1,19 @@
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Navbar";
 
-
 import fylo_one from '../../assets/portfolio-detail/fylo-one.jpg'
 import fylo_two from '../../assets/portfolio-detail/fylo-two.jpg'
+import fylo_one1 from '../../assets/portfolio-detail/fylo-one@2x.jpg'
+import fylo_two1 from '../../assets/portfolio-detail/fylo-two@2x.jpg'
 
 export default function Fylo() {
     return (
         <>
-            < Header />
+            <Header />
             <main className="main-content">
 
-
-                {/* <!-- PORTFOLIO-DETAILS  --> */}
+                {/* PORTFOLIO DETAILS */}
                 <div className="details">
                     <div className="container details__container details__container--fylo"></div>
                 </div>
@@ -20,7 +21,6 @@ export default function Fylo() {
                 <section className="section-detail">
                     <div className="container section-detail__container">
 
-                        {/* <!-- MANAGE-DETAIL  --> */}
                         <div className="detail detail--portfolio">
                             <div className="detail__content">
                                 <h1 className="detail__title">Fylo</h1>
@@ -37,19 +37,17 @@ export default function Fylo() {
                         <div className="info">
                             <div className="info__content">
                                 <h2 className="info__title">Project Background</h2>
-                                <p className="info__text">This project was a front-end  challenge from <a href="https://www.frontendmentor.io/" target="_blank" tabindex="-1">Frontend Mentor</a>. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.</p>
+                                <p className="info__text">This project was a front-end challenge from <a href="https://www.frontendmentor.io/" target="_blank" tabIndex="-1">Frontend Mentor</a>. It's a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I've learned something new with each project, helping me to improve and adapt my style.</p>
                             </div>
 
                             <div className="info__showcase">
-
                                 <h2 className="info__title">Static Previews</h2>
-
                                 <div className="info__showcase-img-wrapper">
                                     <div className="info__showcase-img-wrapper-inner">
-                                        <img className="info__showcase-img" src={fylo_one} alt="Layout Fylo" width="635" height="400" srcset="img/portfolio-detail/fylo-one.jpg 1x, img/portfolio-detail/fylo-one@2x.jpg 2x" />
+                                        <img className="info__showcase-img" src={fylo_one} alt="Layout Fylo" width="635" height="400" srcSet={`${fylo_one} 1x, ${fylo_one1} 2x`} />
                                     </div>
                                     <div className="info__showcase-img-wrapper-inner">
-                                        <img className="info__showcase-img" src={fylo_two} alt="Layout Fylo" width="635" height="400" srcset="img/portfolio-detail/fylo-two.jpg 1x, img/portfolio-detail/fylo-two@2x.jpg 2x" />
+                                        <img className="info__showcase-img" src={fylo_two} alt="Layout Fylo" width="635" height="400" srcSet={`${fylo_two} 1x, ${fylo_two1} 2x`} />
                                     </div>
                                 </div>
                             </div>
@@ -57,30 +55,24 @@ export default function Fylo() {
                     </div>
                 </section>
 
-
-                {/* <!-- PAGE-SLIDER --> */}
+                {/* PAGE SLIDER */}
                 <section className="slider">
                     <div className="container slider__container">
-
                         <h2 className="visually-hidden">Page slider</h2>
                         <h3 className="slider__page-title">
-                            <a className="slider__page-link" href="portfolio-insure.html">Insure</a>
+                            <Link className="slider__page-link" to='/portfolio/insure'>Insure</Link>
                         </h3>
                         <h3 className="slider__page-title slider__page-title--next">
-                            <a className="slider__page-link slider__page-link--next" href="portfolio-manage.html">Manage</a>
+                            <Link className="slider__page-link slider__page-link--next" to='/portfolio/manage'>Manage</Link>
                         </h3>
                     </div>
-
                 </section>
 
-
-                {/* <!-- CTA --> */}
+                {/* CTA */}
                 <section className="cta">
-
                     <div className="container cta__container">
-
                         <h2 className="cta__title">Interested in doing a project together?</h2>
-                        <a className="button cta__button" href="contact.html">Contact me</a>
+                        <Link className="button cta__button" to='/contact'>Contact me</Link>
                     </div>
                 </section>
 

@@ -2,6 +2,10 @@
 import Footer from '../components/Footer'
 import Header from '../components/Navbar'
 
+import github_black from '../assets/social/github-black.svg'
+import twitter_black from '../assets/social/twitter-black.svg'
+import linkedin_black from '../assets/social/linkedin-black.svg'
+
 export default function Contact() {
     return (
         <>
@@ -23,17 +27,17 @@ export default function Contact() {
                                 <ul className="social">
                                     <li className="social__item">
                                         <a className="social__link" href="#" target="_blank">
-                                            <img className="social__icon" src="img/social/github-black.svg" alt="GitHub" width="25" height="24" />
+                                            <img className="social__icon" src={github_black} alt="GitHub" width="25" height="24" />
                                         </a>
                                     </li>
                                     <li className="social__item">
                                         <a className="social__link" href="#" target="_blank">
-                                            <img className="social__icon" src="img/social/twitter-black.svg" alt="Twitter" width="24" height="19" />
+                                            <img className="social__icon" src={twitter_black} alt="Twitter" width="24" height="19" />
                                         </a>
                                     </li>
                                     <li className="social__item">
                                         <a className="social__link" href="#" target="_blank">
-                                            <img className="social__icon" src="img/social/linkedin-black.svg" alt="LinkedIn" width="24" height="24" />
+                                            <img className="social__icon" src={linkedin_black} alt="LinkedIn" width="24" height="24" />
                                         </a>
                                     </li>
                                 </ul>
